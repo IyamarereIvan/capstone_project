@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MNI</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/maincss.css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/mainjs.js"></script>
+</head>
+
+<body class="container-fluid">
+    <nav class="navbar navbar-expand-lg  navbar-custom ">
+        <a class="navbar-brand" href="#"><img src="images/logo.png" width="70px"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="fa fa-bars" style="color: white;"></span>
+        </button>
+
+        <div class="collapse navbar-collapse navbar-items " id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Charts
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Chart</a>
+                        <a class="dropdown-item" href="#">Previous chart</a>
+
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        News
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">MNI News</a>
+                        <a class="dropdown-item" href="#">Other News</a>
+
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+            </ul>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Artist</button>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">SignUp/LogIn</button>
+        </div>
+    </nav>
+    <div class="container-fluid topchart">
+        <div class="card-columns">
+            <div class="card top">
+                <img class="card-img-top" src="images/mni6.jpeg" alt="Card image cap">
+                <div class="card-body text-center top-body">
+                    <p class="card-text">Hallelujah-<span>Ganza</span></p>
+                </div>
+            </div>
+            <div class="card top ">
+                <img class="card-img-top" src="images/mni6.jpeg" alt="Card image cap">
+                <div class="card-body text-center top-body">
+                    <p class="card-text">Hallelujah-<span>Ganza</span></p>
+                </div>
+            </div>
+            <div class="card top">
+                <img class="card-img-top" src="images/mni6.jpeg" alt="Card image cap">
+                <div class="card-body text-center top-body">
+                    <p class="card-text">Hallelujah-<span>Ganza</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-auto prev-btn">
+            <button><a href="chart.html">Previous charts</a></button>
+        </div>
+    </div>
+    <div class="container-fluid chart-section">
+        <div class="col-md-auto">
+            <h5 class="card-title">Chart of the Term from January to April</h5>
+        </div>
+        <div class="srch">
+            <input type="text" placeholder="Search" name="searcg" required><a class="srch" href="#"><i
+                    class="fa fa-search"></i></a>
+        </div>
+
+        <div class="row">
+            <div class="card chart col-lg-10 col-md-12 col-sm-12 col-xs-12">
+                <div class="card-body chart">
+                    <div class="songnumber col-1">
+                        <p class="number">1</p>
+                    </div>
+                    <div class="songinfo col-8">
+                        <div class="artwork">
+                            <img src="images/music.jpg ">
+                        </div>
+                        <div class="details col-8">
+                            <div class="song-title">
+                                <h4>Inkoramutima za meddy</h4>
+                            </div>
+                            <div class="artist">
+                                <p>Imena Band</p>
+                            </div>
+                            <div class="time">
+                                <p>3 month ago</p>
+                            </div>
+                        </div>
+                        <div class="actions col-md-4 col-sm-4">
+                            <div class="votes">
+                                <label for="votes">votes:</label>
+                                <h5>5000</h5>
+                            </div>
+                            <button class="vote btn"><a href="vote.html">Vote</a> </button>
+                            <a href="#">Listen<i class="fa fa-play"></i></a>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="card-body chart">
+                    <div class="songnumber col-1">
+                        <p class="number">2</p>
+                    </div>
+                    <div class="songinfo col-8">
+                        <div class="artwork">
+                            <img src="images/music.jpg ">
+                        </div>
+                        <div class="details col-8">
+                            <div class="song-title">
+                                <h4>EJO Heza</h4>
+                            </div>
+                            <div class="artist">
+                                <p>Imena Band</p>
+                            </div>
+                            <div class="time">
+                                <p>3 month ago</p>
+                            </div>
+                        </div>
+                        <div class="actions col-md-4 col-sm-4">
+                            <div class="votes">
+                                <label for="votes">votes:</label>
+                                <h5>5000</h5>
+                            </div>
+                            <button class="vote btn"><a href="vote.html">Vote</a> </button>
+                            <a href="#">Listen<i class="fa fa-play"></i></a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-auto more-btn">
+            <button><a href="chart.html">Load More</a></button>
+        </div>
+
+    </div>
+    <div class="container-fluid footer">
+        <div class="row">
+            <div class="about col-lg-4 col-md-6 col-sm-12">
+                <img src="images/logo.png" width="60px">
+                <p>Email: info@mni.rw<br>Tel: +250783273388<br>Address: Kimihurura</p>
+            </div>
+            <div class="Menu col-lg-4 col-md-6 col-sm-12">
+                <h5>Menu</h5>
+                <a href="#">Home</a>
+                <a href="#">charts</a>
+                <a href="#">News</a>
+                <a href="#">About Us</a>
+            </div>
+            <div class="links col-lg-4 col-md-6 col-sm-12">
+                <h5>Important Links</h5>
+                <a href="#">FAQs</a>
+                <a href="#">Terms and Conditions</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

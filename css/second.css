@@ -1,0 +1,193 @@
+
+#boxshadow {
+border-style: none;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+  padding: 10px;
+  background: white;
+  text-align: center;
+  border-radius: 30px;
+  height: 400px;
+}
+button :hover{
+	color: #ff9352;
+}
+#container{
+	padding-top: 80px;
+}
+#container1{
+	width: 100%;
+	margin-top: 40px;
+	width: auto;
+	margin-left: 0px;
+	margin-right: 0px;
+	height: 200px;
+background: rgb(0,36,31);
+background: linear-gradient(90deg, rgba(0,36,31,1) 0%, rgba(9,119,121,1) 35%, rgba(10,98,89,1) 100%);	
+}
+
+#text{
+	width: 40px;
+	padding-left: 40px;
+	text-align: center;
+	color: white;
+}
+
+#exampleInputEmail1{
+	width: 200px;
+}
+.form-group{
+	padding-top: 10px;
+}
+.form-control{
+	padding: 20px
+}
+
+input{
+	border-style: none;
+	border-radius: 20px;
+}
+h6{
+	color: #021729;
+}
+h2{
+	color: #021729;
+}
+#next1{
+	max-width: 300px;
+	max-height: 310px;
+	margin-top: 30px;
+	margin-left: 20px;
+	padding: 0px;
+	box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+}
+#line{
+  border-top: 1px solid black;
+  opacity: 20%;
+}
+#firstimage{
+	width: 70%;
+	margin-left: 0px;
+}
+#container{
+	width: 100%;
+}
+#firstp{
+	margin-top: 40px;
+	padding-right: 0px;
+}
+#header{
+	font-size: 50px;
+	color: #1c7070;
+}
+#test{
+	margin-right: 0px
+	width:100%;
+}
+#btn{
+	background-color: #FFA733;
+	border-radius: 40px;
+	border-style: none;
+}
+#subtext{
+	color: #1c7070;
+	padding-top: 20px;
+	text-align: center;
+
+}
+#block{
+text-align: center;
+}
+#textbox{
+	text-align: left;
+	color: #1c7070;
+	background: white;
+	border-style: none;
+	box-shadow: 2px 2px 2px 2px #E0DEDE;
+	width: 200px;
+	height: 80px;
+}
+#block1{
+	display: inherit;
+	margin-right: auto;
+	margin-left: auto;
+}
+#bigcontainer{
+	margin-right: auto;
+	margin-left: auto;
+}
+#col-sm{
+	padding: 0;
+	padding-top: 30PX;
+}
+
+#block2{
+	margin-top: 50px;
+	text-align: center;
+
+    background:#1c7070;
+	color: white;
+	height: 100%;
+}
+#inner-block{
+	width: 300px;
+	display: inline-block;
+	padding-top: 30px;
+}
+.animated shake{
+	color: white;
+}
+.scrolling-box {
+  background-color: #eaeaea;
+  display: inline-flex;
+  width: 100%;
+  height: 200px;
+  padding: 1em;
+  overflow-y: scroll;
+  text-align: center;
+}
+
+section {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+#shadow{
+	box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+	border-style: none;
+	height: 200px;
+	width: 200px;
+	font-size: 20px;
+	display: inline-flex;
+	margin: 20px 0px 20px 0px;
+}
+section{
+	padding: 40px 40px 40px 40px;
+}
+
+#carousel-example-2{
+	width: 100%
+	margin-top: 0px;
+}
+#login{
+	margin: 40px 40px 40px 40px;
+}
+input{
+	border-radius: 20px;
+}
+
+@media (max-width: 767.98px) { 
+
+#new_column{
+	display: block;
+}
+
+
+}
+
+p{
+	text-align: justify;
+  text-justify: inter-word;
+}
+
+

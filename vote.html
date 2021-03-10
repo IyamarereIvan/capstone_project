@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>MNI</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/maincss.css">
+<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/animations.css">
+
+
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+
+<script src="js/mainjs.js"></script>
+</head>
+
+<body class="container-fluid">
+    <div id="languange">
+        <button onclick="topFunction()" id="myeng" title="Go to top">ENG</button>
+        <button onclick="topFunction()" id="myfrch" title="Go to top">KINY</button>
+
+    </div>
+    <button onclick="closelanguange()" id="mycross" title="Go to top"><i class="fa fa-times"></i></button>
+    <button onclick="mylanguange()" id="myBtn" title="Go to top">Languange</button>
+   <nav class="navbar navbar-expand-lg  navbar-custom fixed-top" data-spy="affix" data-offset-top="197">
+
+       <a class="navbar-brand" href="index.html"><img src="images/MNIlogo-02.png" width="130px"></a>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="fa fa-bars" style="color: #ffffff;"></span>
+       </button>
+
+       <div class="collapse navbar-collapse navbar-items " id="navbarSupportedContent">
+           <ul class="navbar-nav mr-auto">
+               <li class="nav-item active">
+                   <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="musi&concerts.html">Music Fans</a>
+               </li>
+
+               <li class="nav-item dropdown">
+                   <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Music Charts</a>
+                   <div class="dropdown-menu">
+                       <a href="chart.html" class="dropdown-item">Chart</a>
+                       <a href="#" class="dropdown-item">Previous Charts</a>
+
+                   </div>
+               </li>
+           </ul>
+
+
+           </ul>
+           <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><a href="Steps.html">Artist</a></button>
+           <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><a href="login.html">
+                   SignUp/LogIn</a></button>
+       </div>
+   </nav>
+    <div class="container-fluid voting">
+        <div class="row">
+            <div class="vote-song col-lg-4 col-md-4 col-sm-12">
+                <img src="images/67912551-banner-music-poster-with-jazz-festival-an-saxophone-on-grungy-background.jpg">
+
+            </div>
+            <div class="vote-info col-lg-8 col-md-8 col-sm-12">
+                <div class="vote-data">
+                    <h5 class="song-name">Ejo Heza</h5>
+                    <p class="song-artist">Imena Band</p>
+                    <p class="code">song code: 1240</p>
+                </div>
+                <div class="options">
+                    <div class="momo">
+                        <img src="images/MTN_MM_logo_generic_2.png">
+                        <div class="momo-button">
+                            <button class="momo-vote" id="myBtn-1" onclick="openmodal_momo()">Vote</button>
+                        </div>
+                        <div id="myModal" class="modal">
+
+                            <!-- Modal content -->
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <form class="momo-form">
+                                    <input type="text" placeholder="Mobile money Number" name="number" required>
+                                    <input type="text" placeholder="Names" name="Names" required>
+                                    <button><a href="#">Vote</a></button>
+
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="visa">
+                        <img src="images/mastercard-credit-card-american-express-visa-debit-card-mastercard.jpg">
+                        <div class="visa-button">
+                            <button class="visa-vote" id="myBtn-2" onclick="openmodal_visa()" >Vote</button>
+                        </div>
+                         <div id="myModal-2" class="modal">
+
+                             <!-- Modal content -->
+                             <div class="modal-content">
+                                 <span class="close-2">&times;</span>
+                                 <form class="momo-form">
+                                     <input type="text" placeholder="card Number" name="number" required>
+                                     <input type="text" placeholder="Expiry Date" name="Names" required>
+                                         <input class="ccv" type="text" placeholder="CCV" name="Names" required>
+                                         <input type="text" placeholder="Names of the Owner" name="Names" required>
+                                     
+                                     <button><a href="#">Vote</a></button>
+
+                                 </form>
+                             </div>
+
+                         </div>
+                        
+                    </div>
+                    <div class="ussd">
+                        <h4>USSD CODE:<br>*611#</h4>
+                        
+                    </div>
+                </div>
+                <button class="back-btn"><a href="chart.html">Go back</a></button>
+                
+            </div>
+        </div>
+    </div> 
+     
+
+    <!-- footer -->
+      <div class="container-fluid footer">
+          <div class="row">
+              <div class="about col-lg-4 col-md-6 col-sm-12">
+                  <img src="images/MNIlogo-02.png" width="180px">
+                  <h5>Find Us</h5>
+                  <p>Email: info@mni.rw<br>Tel: +250783273388<br>Address: Kimihurura</p>
+                  <div class="social-footer">
+                      <a href="#"><i class="fa fa-facebook-square"></i></a>
+                      <a href="#"><i class="fa fa-twitter-square"></i></a>
+                      <a href="#"><i class="fa fa-instagram"></i></a>
+                  </div>
+              </div>
+              <div class="Menu col-lg-4 col-md-6 col-sm-12">
+                  <h5>Make a Tour</h5>
+                  <a href="index.html">Home</a>
+                  <a href="chart.html">charts</a>
+                  <a href="musi&concerts.html">News</a>
+                  <a href="about-us.html">About Us</a>
+              </div>
+              <div class="links col-lg-4 col-md-6 col-sm-12">
+                  <h5>Important Links</h5>
+                  <a href="#">Privacy Policy</a>
+                  <a href="#">Terms and Conditions</a>
+                  <h5>Partners</h5>
+                  <div class=" partner col-6">
+                      <img class="royal" src="images/IMG-20190929-WA0001.jpg">
+                  </div>
+                  <div class="credits">
+                      <p><span>Powered by</span>: Edge Creation & Skyline Ltd </p>
+                  </div>
+              </div>
+
+          </div>
+      </div>
+</body>
+
+</html>
