@@ -15,7 +15,7 @@ app.use('/', router);
 app.get('/', (req, res) =>
   Response.successMessage(
   res, 
-  'SheCanCode Materials APIs',
+  'Researchhun APIs',
   '',
   HttpStatus.OK)
 );

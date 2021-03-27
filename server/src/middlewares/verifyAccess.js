@@ -8,7 +8,7 @@ const verifyAccess = function (requiredRole) {
       if (requiredRole !== userRole) {
         return Response.errorMessage(
           res,
-          "Unauthorized! You don't have access to this resource. Please contact SheCanCode if you think it's a mistake!",
+          "Unauthorized! You don't have access to this resource. Please contact Research if you think it's a mistake!",
           httpStatus.UNAUTHORIZED
         );
       }
