@@ -14,8 +14,10 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
+<script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
 
 <script src="js/mainjs.js"></script>
+<script src="js/connect.js"></script>
 </head>
 <body class="container-fluid">
 
@@ -58,13 +60,14 @@
 
     <div class="upload-paper">
               <h3>Upload Research</h3>
-              <form class="concert-form">
-                  <input type="text" placeholder="Title" name="number" required>
-                  <input type="date" placeholder="Date" name="date" required>
-                  <input type="text" placeholder="Description" name="description" required>
-                  <input class="image-upload" type="file" name="pic" accept="/*">
+              <form class="concert-form" action="" method="post" enctype="multipart/form-data" onsubmit="AJAXSubmit(this); return false;">
+                  <input type="text" placeholder="Title" id="title" name="number" required>
+                  <input type="date" placeholder="Date" id="publishedAt" name="date" required>
+                  <input type="text" placeholder="Description" id="description" name="description" required>
+                  <input class="image-upload" type="file" id="docUrl" name="file" accept="/*">
+                  <input hidden value="ollljekm" type="text" name="upload_preset">
                   <div class="form-button">
-                      <button class="post">Post</button>
+                      <button type="submit" value="Submit" class="post" >Post</button>
                   </div>
               </form>
     </div>

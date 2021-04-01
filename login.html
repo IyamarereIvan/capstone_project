@@ -2,25 +2,26 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>ResearchHub| Login</title>
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="css/maincss.css">
-<link rel="stylesheet" type="text/css" href="css/second.css">
-<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="css/animations.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ResearchHub| Login</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/maincss.css">
+    <link rel="stylesheet" type="text/css" href="css/second.css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animations.css">
 
 
 
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/bootstrap.bundle.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
 
-<script src="js/mainjs.js"></script>
+    <script src="js/mainjs.js"></script>
+    <script src="js/connect.js"></script>
 </head>
 
 <body class="container-fluid">
@@ -31,13 +32,13 @@
     </div>
     <button onclick="closelanguange()" id="mycross" title="Go to top"><i class="fa fa-times"></i></button>
     <button onclick="mylanguange()" id="myBtn" title="Go to top">Languange</button>
-     <nav class="navbar navbar-expand-lg  navbar-custom fixed-top" data-spy="affix" data-offset-top="197">
+    <nav class="navbar navbar-expand-lg  navbar-custom fixed-top" data-spy="affix" data-offset-top="197">
 
-         <a class="navbar-brand" href="index.html"><img src="images/MNIlogo-02.png" width="130px"></a>
-         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-             <span class="fa fa-bars" style="color: #ffffff;"></span>
-         </button>
+        <a class="navbar-brand" href="index.html"><img src="images/MNIlogo-02.png" width="130px"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="fa fa-bars" style="color: #ffffff;"></span>
+        </button>
         <div class="collapse navbar-collapse navbar-items " id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
@@ -60,31 +61,33 @@
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><a href="login.html">
                     SignUp/LogIn</a></button>
         </div>
-     </nav>
-     
+    </nav>
 
-     <div class="container-fluid" style="padding-top: 40px;">
-  <div class="row">
-    <div class="col-sm">
-      <img style="width: 100%;" src="images/cutmusic2.png">
-    </div>
 
-    <div class="col-sm" style="padding-top: 200px;">
-        <div id="boxshadow">
-          <h2 style="text-align: center;">Login</h2>
-    <form style="padding-top: 100px;" >
-      <input type="text" class="form-control" placeholder="Enter username">
-      <input style="margin-top: 30px;" type="password" class="form-control" placeholder="Enter your password">
-      <button
-          style="margin-top: 20px; border-style: none; background-color: #021729; color: white; width: 200px; height: 50px; border-radius: 20px;">Login</button>
-<h2 style="font-size: 20px;">new user <a style="font-weight: bold; color: #09a07f; font-family: Arial"
-        href="sign up.html"><i>Sign up</i></a></h2>
+    <div class="container-fluid" style="padding-top: 40px;">
+        <div class="row">
+            <div class="col-sm">
+                <img style="width: 100%;" src="images/cutmusic2.png">
+            </div>
+
+            <div class="col-sm" style="padding-top: 200px;">
+                <div id="boxshadow">
+                    <h2 style="text-align: center;">Login</h2>
+                    <form style="padding-top: 100px;" onsubmit=" login();return false;">
+                        <input type="email" class="form-control" id="email" placeholder="Enter email">
+                        <input style="margin-top: 30px;" type="password" id="password" class="form-control"
+                            placeholder="Enter your password">
+                        <button type="submit"
+                            style="margin-top: 20px; border-style: none; background-color: #021729; color: white; width: 200px; height: 50px; border-radius: 20px;">Login</button>
+                        <h2 style="font-size: 20px;">new user <a
+                                style="font-weight: bold; color: #09a07f; font-family: Arial"
+                                href="sign up.html"><i>Sign up</i></a></h2>
+                </div>
+
+            </div>
+            </form>
+        </div>
     </div>
-    
-</div>
-</form>
-</div>
-</div>
 
 
 
@@ -93,32 +96,32 @@
 
 
     <!-- footer -->
- <div class="container-fluid footer">
-     <div class="row">
-         <div class="about col-lg-4 col-md-6 col-sm-12">
-             <img src="images/logo.png" width="180px">
-             <h5>Find Us</h5>
-             <p>Email: info@researchhub.com<br>Tel: +250783273388<br>Address: Kimihurura</p>
-             <div class="social-footer">
-                 <a href="#"><i class="fa fa-facebook-square"></i></a>
-                 <a href="#"><i class="fa fa-twitter-square"></i></a>
-                 <a href="#"><i class="fa fa-instagram"></i></a>
-             </div>
-         </div>
-         <div class="Menu col-lg-4 col-md-6 col-sm-12">
-             <h5>Make a Tour</h5>
-             <a href="index.html">Home</a>
-             <a href="chart.html">discover</a>
-             <a href="about-us.html">About Us</a>
-         </div>
-         <div class="links col-lg-4 col-md-6 col-sm-12">
-             <h5>Important Links</h5>
-             <a href="#">Privacy Policy</a>
-             <a href="#">Terms and Conditions</a>
-             <h5>Partners</h5>
+    <div class="container-fluid footer">
+        <div class="row">
+            <div class="about col-lg-4 col-md-6 col-sm-12">
+                <img src="images/logo.png" width="180px">
+                <h5>Find Us</h5>
+                <p>Email: info@researchhub.com<br>Tel: +250783273388<br>Address: Kimihurura</p>
+                <div class="social-footer">
+                    <a href="#"><i class="fa fa-facebook-square"></i></a>
+                    <a href="#"><i class="fa fa-twitter-square"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="Menu col-lg-4 col-md-6 col-sm-12">
+                <h5>Make a Tour</h5>
+                <a href="index.html">Home</a>
+                <a href="chart.html">discover</a>
+                <a href="about-us.html">About Us</a>
+            </div>
+            <div class="links col-lg-4 col-md-6 col-sm-12">
+                <h5>Important Links</h5>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms and Conditions</a>
+                <h5>Partners</h5>
 
 
-         </div>
+            </div>
 </body>
 
 </html>

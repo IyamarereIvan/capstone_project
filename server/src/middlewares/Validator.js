@@ -66,7 +66,7 @@ class Validator {
   static newDocRules() {
     return [
       check("title", "Title name should be valid").isString(),
-      check("docUrl", "Document URL name should be valid").isString(),
+      check("docUrl", "Document URL should be valid").isURL(),
       check("description", "Description should be valid").isString(),
       check("publishedAt", "Date of publication should be valid").isDate(),
     ];
