@@ -102,6 +102,12 @@ User signup functionality  <> END
 ==============================================
 */
 
+/* 
+==============================================
+File upload functionality  <> START
+==============================================
+*/
+
 function addDoc(docUrl) {
   var title = document.getElementById("title").value;
   var publishedAt = document.getElementById("publishedAt").value;
@@ -139,12 +145,6 @@ function addDoc(docUrl) {
     .catch((error) => console.log("error", error));
 }
 
-/* 
-==============================================
-File upload functionality  <> START
-==============================================
-*/
-
 window.ajaxSuccess = function () {
   response = JSON.parse(this.responseText);
   console.log("ajaxSuccess", typeof this.responseText);
@@ -176,3 +176,56 @@ window.AJAXSubmit = function (formElement) {
 File upload functionality  <> END
 ==============================================
 */
+
+/* 
+==============================================
+File upload functionality  <> START
+==============================================
+*/
+
+async function viewAllDocs() {
+  var myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+
+  var requestOptions = {
+    method: "GET",
+    headers: myHeaders,
+    redirect: "follow",
+  };
+
+  var response = await fetch(
+    "http://localhost:5000/api/v1/docs/",
+    requestOptions
+  );
+  const data = await response.json();
+
+  return data;
+}
+
+// JWT decoder
+
+ function parseJwt() {
+  var token = localStorage.getItem("rh-token");
+  if (token) {
+    var base64Url = token.split(".")[1];
+    var base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
+    var jsonPayload = decodeURIComponent(
+      atob(base64)
+        .split("")
+        .map(function (c) {
+          return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
+        })
+        .join("")
+    );
+
+    var userPayload = JSON.parse(jsonPayload);
+    console.log(userPayload);
+    return userPayload;
+  }
+  return;
+}
+
+function logout(){
+  localStorage.removeItem("rh-token");
+  window.location.replace("/")
+}

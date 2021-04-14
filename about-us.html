@@ -18,7 +18,7 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
-
+<script src="js/connect.js"></script>
 <script src="js/mainjs.js"></script>
 </head>
 
@@ -60,8 +60,23 @@
 
            </ul>
            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><a href="Steps.html">Artist</a></button>
-           <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><a href="login.html">
-                   SignUp/LogIn</a></button>
+           <script>
+            (async function () {
+                const userData = await parseJwt();
+                const allDocs = await viewAllDocs();
+
+                container = document.getElementById('user-auth');
+                if (userData) {
+                    container.innerHTML += `<button class="btn btn-outline-success w-100 my-sm-0" onClick="logout()">${userData.firstName + " " + userData.lastName} <i class="fa fa-power-off" aria-hidden="true"></i></button>`;
+                }
+                else {
+                    container.innerHTML += `<button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+            <a href="login.html">
+                SignUp/LogIn</a></button>`
+                }
+            })();
+        </script>
+        <div id="user-auth"></div>
        </div>
    </nav>
     <div class="container-fluid animatedParent">

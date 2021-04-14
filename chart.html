@@ -2,24 +2,24 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Research|discover</title>
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="css/maincss.css">
-<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="css/animations.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Research|discover</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/maincss.css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animations.css">
 
 
 
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/bootstrap.bundle.min.js"></script>
-
-<script src="js/mainjs.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/connect.js"></script>
+    <script src="js/mainjs.js"></script>
 </head>
 
 <body class="container-fluid">
@@ -57,8 +57,23 @@
             </ul>
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><a
                     href="upload.html">Publish</a></button>
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><a href="login.html">
-                    SignUp/LogIn</a></button>
+                    <script>
+                        (async function () {
+                            const userData = await parseJwt();
+                            const allDocs = await viewAllDocs();
+        
+                            container = document.getElementById('user-auth');
+                            if (userData) {
+                                container.innerHTML += `<button class="btn btn-outline-success w-100 my-sm-0" onClick="logout()">${userData.firstName + " " + userData.lastName} <i class="fa fa-power-off" aria-hidden="true"></i></button>`;
+                            }
+                            else {
+                                container.innerHTML += `<button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                        <a href="login.html">
+                            SignUp/LogIn</a></button>`
+                            }
+                        })();
+                    </script>
+                    <div id="user-auth"></div>
         </div>
     </nav>
     <div class="container-fluid topchart">
@@ -78,141 +93,54 @@
     </div>
 
     <div class="container-fluid chart-section">
-       
+
         <div class="srch">
             <input type="text" placeholder="Search" name="searcg" required><a class="srch" href="#"><i
                     class="fa fa-search"></i></a>
         </div>
 
         <div class="row">
-            <div class="card chart col-lg-7 col-md-12 col-sm-12 col-xs-12">
-                <div class="card-body chart">
-                   
-                    <div class="songinfo col-12">
-                        <div class="row">
-                            <div class="details col-lg-12">
-                                <div class="song-title">
-                                    <h4>The role of phones in youth development, through the use of mobile money</h4>
-                                </div>
-                                <div class="obstract">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat....
-                                    </p>
-                                </div>
-                                <div class="artist">
-                                    <p>Ivan Iyamarere</p>
-                                </div>
-                                <div class="time">
-                                    <p>3 month ago</p>
-                                </div>
-                            </div>
-                            <div class="actions col-lg-12">
+            <script>
+                (async function () {
+                    const allDocs = await viewAllDocs();
 
-                                <button class="vote-btn btn"><a href="vote.html">Read</a>
-                                </button>
+                    container = document.getElementById('card-container');
+                    for (i = 0; i < 2; i++) {
 
-                            </div>
-                        </div>
+                        container.innerHTML += `
+                        <div class="card-body chart">
 
+<div class="songinfo col-12">
+<div class="row">
+<div class="details col-12">
+<div class="song-title">
+    <h4>${allDocs.data[i].title}</h4>
+    <p>${allDocs.data[i].description}
+    </p>
+</div>
+<div class="artist">
+    <p>${allDocs.data[i].docPublisher.firstName + " " + allDocs.data[i].docPublisher.lastName}</p>
+</div>
+<div class="time">
+    <p>${allDocs.data[i].createdAt.substr(0, 10)}</p>
+</div>
+</div>
+<div class="actions col-md-12 col-sm-12">
 
-                    </div>
+<button class="vote-btn btn"><a href="vote.html">Read</a> </button>
 
-                </div>
-                <div class="card-body chart">
+</div>
+</div>
+</div>
 
-                  <div class="songinfo col-12">
-                      <div class="row">
-                          <div class="details col-lg-12">
-                              <div class="song-title">
-                                  <h4>The role of phones in youth development, through the use of mobile money</h4>
-                              </div>
-                              <div class="obstract">
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                      incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                      nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat....
-                                  </p>
-                              </div>
-                              <div class="artist">
-                                  <p>Ivan Iyamarere</p>
-                              </div>
-                              <div class="time">
-                                  <p>3 month ago</p>
-                              </div>
-                          </div>
-                          <div class="actions col-lg-12">
+</div>
+                        `;
+                    }
+                })();
+            </script>
 
-                              <button class="vote-btn btn"><a href="vote.html">Read</a>
-                              </button>
-
-                          </div>
-                      </div>
-
-
-                  </div>
-                </div>
-                 <div class="card-body chart">
-                    <div class="songinfo col-12">
-                        <div class="row">
-                            <div class="details col-lg-12">
-                                <div class="song-title">
-                                    <h4>The role of phones in youth development, through the use of mobile money</h4>
-                                </div>
-                                <div class="obstract">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat....
-                                    </p>
-                                </div>
-                                <div class="artist">
-                                    <p>Ivan Iyamarere</p>
-                                </div>
-                                <div class="time">
-                                    <p>3 month ago</p>
-                                </div>
-                            </div>
-                            <div class="actions col-lg-12">
-
-                                <button class="vote-btn btn"><a href="vote.html">Read</a>
-                                </button>
-
-                            </div>
-                        </div>
-
-
-                    </div>
-                 </div>
-                  <div class="card-body chart">
-              <div class="songinfo col-12">
-                  <div class="row">
-                      <div class="details col-lg-12">
-                          <div class="song-title">
-                              <h4>The role of phones in youth development, through the use of mobile money</h4>
-                          </div>
-                          <div class="obstract">
-                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                  nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat....
-                              </p>
-                          </div>
-                          <div class="artist">
-                              <p>Ivan Iyamarere</p>
-                          </div>
-                          <div class="time">
-                              <p>3 month ago</p>
-                          </div>
-                      </div>
-                      <div class="actions col-lg-12">
-
-                          <button class="vote-btn btn"><a href="vote.html">Read</a>
-                          </button>
-
-                      </div>
-                  </div>
-
-
-              </div>
-                  </div>
+            <!-- All research docs are loaded in this div -->
+            <div id="card-container" class="card chart col-lg-7 col-md-12 col-sm-12 col-xs-12">
 
             </div>
             <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
@@ -253,32 +181,32 @@
         </div>
 
     </div>
- <div class="container-fluid footer">
-     <div class="row">
-         <div class="about col-lg-4 col-md-6 col-sm-12">
-             <img src="images/logo.png" width="180px">
-             <h5>Find Us</h5>
-             <p>Email: info@researchhub.com<br>Tel: +250783273388<br>Address: Kimihurura</p>
-             <div class="social-footer">
-                 <a href="#"><i class="fa fa-facebook-square"></i></a>
-                 <a href="#"><i class="fa fa-twitter-square"></i></a>
-                 <a href="#"><i class="fa fa-instagram"></i></a>
-             </div>
-         </div>
-         <div class="Menu col-lg-4 col-md-6 col-sm-12">
-             <h5>Make a Tour</h5>
-             <a href="index.html">Home</a>
-             <a href="chart.html">discover</a>
-             <a href="about-us.html">About Us</a>
-         </div>
-         <div class="links col-lg-4 col-md-6 col-sm-12">
-             <h5>Important Links</h5>
-             <a href="#">Privacy Policy</a>
-             <a href="#">Terms and Conditions</a>
-             <h5>Partners</h5>
+    <div class="container-fluid footer">
+        <div class="row">
+            <div class="about col-lg-4 col-md-6 col-sm-12">
+                <img src="images/logo.png" width="180px">
+                <h5>Find Us</h5>
+                <p>Email: info@researchhub.com<br>Tel: +250783273388<br>Address: Kimihurura</p>
+                <div class="social-footer">
+                    <a href="#"><i class="fa fa-facebook-square"></i></a>
+                    <a href="#"><i class="fa fa-twitter-square"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="Menu col-lg-4 col-md-6 col-sm-12">
+                <h5>Make a Tour</h5>
+                <a href="index.html">Home</a>
+                <a href="chart.html">discover</a>
+                <a href="about-us.html">About Us</a>
+            </div>
+            <div class="links col-lg-4 col-md-6 col-sm-12">
+                <h5>Important Links</h5>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms and Conditions</a>
+                <h5>Partners</h5>
 
 
-         </div>
+            </div>
 </body>
 
 </html>
