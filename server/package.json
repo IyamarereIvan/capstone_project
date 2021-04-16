@@ -6,8 +6,6 @@
   "scripts": {
     "start": "node --require @babel/polyfill build/index.js",
     "dev-server": "nodemon --exec babel-node ./src/index.js",
-    "test": "cross-env NODE_ENV=testing npm run dropTables && cross-env NODE_ENV=testing npm run db:migrate && cross-env NODE_ENV=testing nyc --reporter=text --reporter=html --require @babel/polyfill --require @babel/register mocha ./src/tests/*  --timeout 200000 --exit",
-    "coverage": "nyc report --reporter=text-lcov | coveralls",
     "revertSeed": "sequelize db:seed:undo:all",
     "seed": "sequelize db:seed:undo:all && sequelize db:seed:all",
     "clean": "rm -rf build && mkdir build",

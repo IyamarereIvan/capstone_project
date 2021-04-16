@@ -6,6 +6,10 @@
 #languange{
     display: none;
 }
+
+.topslide img {
+    opacity: 0.6;
+}
 #myBtn {
     display: none;
     position: fixed;

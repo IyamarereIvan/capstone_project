@@ -25,38 +25,6 @@ authRouter.post(
   AuthController.login
 );
 
-authRouter.patch(
-  "/admin/assign-role",
-  verifyToken,
-  verifyAccess("admin"),
-  Validator.roleRules(),
-  Validator.userIdRules(),
-  Validator.validateInput,
-  userExists,
-  AuthController.assignRole
-);
 
-authRouter.post(
-  "/admin/invite",
-  verifyToken,
-  verifyAccess("admin"),
-  Validator.invitationRules(),
-  Validator.validateInput,
-  accountExist,
-  AuthController.inviteUser
-);
-
-authRouter.get(
-  "/admin/users",
-  verifyToken,
-  verifyAccess("admin"),
-  AuthController.viewUsers
-);
-
-authRouter.patch(
-  "/user/profile",
-  verifyToken,
-  AuthController.updateProfile
-);
 
 export default authRouter;
