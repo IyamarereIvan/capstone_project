@@ -18,7 +18,7 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
-
+<script src="js/connect.js"></script>
 <script src="js/mainjs.js"></script>
 </head>
 
@@ -61,24 +61,26 @@
  </div>
    </nav>
     <div class="container-fluid voting">
-        <div class="row">
+            <script>
+                (async function () {
+                 const singleDoc =  await viewSingleDocs();
+                 const {data} = singleDoc
+                 console.log("======", data)
+                //  const allDocs = await viewAllDocs();
+                 container = document.getElementById("doc-container");
+
+                 container.innerHTML += `
             <div class="col-lg-8 col-md-8 col-sm-12 read">
                 <div class="song-title" style="font-weight: bolder;">
                 <p>The role of phones in youth development, through the use of mobile money</p>
                     <div class="author-details">
-                        <label>Author: Ivan Iyamarere</label><br>
-                        <label>Published on: 19 March 2020</label>
+                        <label>Author: ${data.docPublisher.firstName} ${data.docPublisher.lastName}</label><br>
+                        <label>Published on: ${new Date(data.createdAt).toUTCString().substr(0,16)}</label>
                     </div>
                 <p>Obstract</p>
             </div>
-             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                 tempor
-                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                 quis
-                 nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                 consequat....
-             </p>
-                <embed src="images/Amategeko y'umuhanda.pdf" type="application/pdf" width="100%" height="600px" />
+             <p>${data.description}</p>
+                <embed src=${data.docUrl} type="application/pdf" width="100%" height="600px" />
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 comments">
                     <div class="row cate" style="font-size: small;">
@@ -125,8 +127,13 @@
                         </div>
                         
                     </div>
-            </div>
         </div>
+                 `
+                })()
+            </script>
+            <div id="doc-container" class="row" >
+
+            </div>
     </div> 
      
 

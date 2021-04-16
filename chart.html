@@ -103,9 +103,9 @@
             <script>
                 (async function () {
                     const allDocs = await viewAllDocs();
-
+                    console.log(allDocs)
                     container = document.getElementById('card-container');
-                    for (i = 0; i < 2; i++) {
+                    for (i = 0; i < allDocs.data.length; i++) {
 
                         container.innerHTML += `
                         <div class="card-body chart">
@@ -127,7 +127,7 @@
 </div>
 <div class="actions col-md-12 col-sm-12">
 
-<button class="vote-btn btn"><a href="vote.html">Read</a> </button>
+<button class="vote-btn btn"><a href="vote.html?id=${allDocs.data[i].id}">Read</a> </button>
 
 </div>
 </div>

@@ -179,7 +179,7 @@ File upload functionality  <> END
 
 /* 
 ==============================================
-File upload functionality  <> START
+View all research functionality  <> START
 ==============================================
 */
 
@@ -201,6 +201,37 @@ async function viewAllDocs() {
 
   return data;
 }
+
+
+
+/* 
+==============================================
+View specific functionality  <> START
+==============================================
+*/
+
+async function viewSingleDocs() {
+  const urlParams = new URLSearchParams(window.location.search);
+const docId = urlParams.get('id');
+console.log("-------->", docId)
+  var myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+
+  var requestOptions = {
+    method: "GET",
+    headers: myHeaders,
+    redirect: "follow",
+  };
+
+  var response = await fetch(
+    `${baseURL}/docs/${docId}`,
+    requestOptions
+  );
+  const data = await response.json();
+
+  return data;
+}
+
 
 // JWT decoder
 
