@@ -1,5 +1,5 @@
 // BACKEND BASE URL, you can replace it with the remote server url instead of using localhost
-var baseURL = "http://localhost:5000/api/v1";
+var baseURL = "https://researchhub.herokuapp.com/api/v1";
 
 /* 
 ==============================================
@@ -194,7 +194,7 @@ async function viewAllDocs() {
   };
 
   var response = await fetch(
-    "http://localhost:5000/api/v1/docs/",
+    `${baseURL}/docs/`,
     requestOptions
   );
   const data = await response.json();
